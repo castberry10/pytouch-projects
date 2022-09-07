@@ -21,3 +21,11 @@ print(torch.cuda.device_count()) # 사용 가능 GPU 개수
 batch_size = 50
 epoch_num = 15
 learning_rate = 0.0001
+
+#데이터 불러오기 
+train_data = datasets.MNIST(root = './data', train = True, download = True,
+                           transform = transforms.ToTensor())
+test_data = datasets.MNIST(root = './data', train = False,
+                           transform = transforms.ToTensor())
+print('트레이닝 데이터 개수: ', len(train_data))
+print('테스트 데이터 개수: ', len(test_data))
