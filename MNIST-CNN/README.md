@@ -8,7 +8,7 @@ CNN(
 >  (dropout1): Dropout2d(p=0.25, inplace=False)  
 >  (dropout2): Dropout2d(p=0.5, inplace=False)  
 >  (fc1): Linear(in_features=9216, out_features=128, bias=True)  
->  (fc2): Linear(in_features=128, out_features=10, bias=True)  
+  (fc2): Linear(in_features=128, out_features=10, bias=True)  
 )  
   
 실행 결과 
