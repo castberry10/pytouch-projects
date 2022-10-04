@@ -50,3 +50,12 @@ for clss in classes_list: #
         sec = os.path.join(path, fname)
         dst = os.path.join(os.path.join(test_dir, clss), fname)
         shutil.copyfile(src, dst)
+
+import torch
+USE_CUDA = torch.cuda.is_available()
+DEVICE = torch.device('cuda' if USE_CUDA else 'cpu')
+
+BATCH_SIZE = 256
+EPOCH = 30 
+import torchvision.transforms as transforms
+from torchvision.datasets import ImageFolder
